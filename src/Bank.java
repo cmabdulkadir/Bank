@@ -36,4 +36,12 @@ public class Bank {
         readTransactions();
     }
 
+    public void readTransactions() {
+
+        for (Integer key : transactions.keySet()) {         //printing all values
+            System.out.print("Key: " + key + " Values: " + transactions.get(key));
+            //printing all values
+        }
+
+    }
 }
