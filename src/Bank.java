@@ -20,4 +20,20 @@ public class Bank {
         System.out.println("Type (5) to Exit");
     }
 
+    public void createTransactions() {
+        System.out.println("Enter the ID number:");
+        int idNum = Integer.parseInt(scan.nextLine());
+        System.out.println("Enter account holder name:");
+        String accountHolder = scan.nextLine();
+        System.out.println("Enter the the transaction number:");
+        int transactionNumber = Integer.parseInt(scan.nextLine());
+        System.out.println("Enter the purchase name:");
+        String purchaseName = scan.nextLine();
+        System.out.println("Enter the purchase price:");
+        double purchasePrice = Double.parseDouble(scan.nextLine());
+        transactions.put(idNum, new Transaction(accountHolder, transactionNumber, purchasePrice, purchaseName));
+        //System.out.println(transactions);
+        readTransactions();
+    }
+
 }
