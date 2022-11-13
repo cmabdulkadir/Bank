@@ -62,4 +62,12 @@ public class Bank {
         transactions.put(id, transactions.get(id));
         transactions.put(id ,new Transaction(accountHolder, transactionNumber, purchasePrice, purchaseName));
     }
+    public void deleteTransaction (){
+        this.readTransactions();
+        System.out.println("What is the iD of the transaction you want to delete:");
+        Integer id = Integer.parseInt(scan.nextLine());
+        transactions.remove(id);
+        System.out.println("---TRANSACTION DELETED---");
+        System.out.println(transactions);
+    }
 }
