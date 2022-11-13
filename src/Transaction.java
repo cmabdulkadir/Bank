@@ -15,4 +15,14 @@ public class Transaction {
 
 
     }
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "Account Holder: " + accountHolder + '\'' +
+                ", Transaction Number=" + transactionNumber +
+                ", Purchase Price=" + purchasePrice +
+                ", Purchase Name='" + purchaseName + '\'' +
+                '}';
+    }
+
 }
